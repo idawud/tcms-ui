@@ -10,6 +10,7 @@ import { NewcustomerComponent } from './components/newcustomer/newcustomer.compo
 import { ReportingComponent } from './components/reporting/reporting.component';
 import { MainComponent } from './components/main/main.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
+import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ProjectDetailsComponent } from './components/project-details/project-de
     NewcustomerComponent,
     ReportingComponent,
     MainComponent,
-    ProjectDetailsComponent
+    ProjectDetailsComponent,
+    CustomerDetailsComponent
   ],
   imports: [
     BrowserModule,
