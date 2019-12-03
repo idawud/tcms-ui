@@ -15,7 +15,7 @@
 <div class="row">
 <div class="table-responsive">
         <table class="table table-striped table-sm">
-          <thead>
+          <thead> 
             <tr>
               <th>#</th>
               <th>Name</th>
@@ -26,38 +26,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr >
-              <td>1</td>
-              <td>Dawud Ismail</td>
-              <td>North Legon Libya</td>
-              <td>05486596</td>
-              <td>Email@me.dot</td>
-              <td><a href="customers_details.html#1">View</a></td>
-            </tr>
-            <tr >
-                <td>2</td>
-                <td>Duwad Ibrahim</td>
-                <td>china town</td>
-                <td>433333333333354</td>
-                <td>dawul@me.dot</td>
-                <td><a href="customers_details.html#2">View</a></td>
-            </tr>
-            <tr >
-                <td>3</td>
-                <td>Deniss Ky-09</td>
-                <td>Kumasi russia</td>
-                <td>656565</td>
-                <td>Emaicf5@me.dot</td>
-                <td><a href="customers_details.html#3">View</a></td>
-            </tr>
-            <tr >
-                <td>4</td>
-                <td>Another Name</td>
-                <td>somewhere</td>
-                <td>+2555512664</td>
-                <td>sender@name.fg</td>
-                <td><a href="customers_details.html#4">View</a></td>
-            </tr>
+                <tr *ngFor="let customer of customers">
+                    <td> {{ customer.id }} </td>
+                    <td> {{ customer.name }}</td>
+                    <td> {{ customer.address }}</td>
+                    <td> {{ customer.telephoneNumber }}</td>
+                    <td> {{ customer.email }}</td>
+                    <td><a [routerLink]="['/customerDetails/', customer.id ]">View</a></td>
+                </tr>   
           </tbody>
         </table>
       </div>
