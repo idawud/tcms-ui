@@ -9,6 +9,7 @@ import { NewprojectComponent } from './components/newproject/newproject.componen
 import { NewcustomerComponent } from './components/newcustomer/newcustomer.component';
 import { ReportingComponent } from './components/reporting/reporting.component';
 import { MainComponent } from './components/main/main.component';
+import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MainComponent } from './components/main/main.component';
     NewprojectComponent,
     NewcustomerComponent,
     ReportingComponent,
-    MainComponent
+    MainComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule,
