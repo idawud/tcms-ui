@@ -13,6 +13,7 @@ import { ProjectDetailsComponent } from './components/project-details/project-de
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 import { CustomersService } from './services/customers.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     CustomersService
