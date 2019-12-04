@@ -16,10 +16,11 @@ const routes: Routes = [
   { path : 'projects', component : ProjectsComponent },
   { path : 'newcustomer', component : NewcustomerComponent },
   { path : 'newproject', component : NewprojectComponent },
-  { path : 'reporting', component : ReportingComponent }
+  { path : 'reporting', component : ReportingComponent },
+  { path : 'projectDetails/:id', component : ProjectDetailsComponent },
+  { path : 'customerDetails/:id', component : CustomerDetailsComponent }
 ];
-// { path : 'projectDetails/:id', component : ProjectDetailsComponent },
-// { path : 'customerDetails/:id', component : CustomerDetailsComponent }
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
