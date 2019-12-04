@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-customers',
@@ -7,14 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class CustomersComponent implements OnInit {
+  // tslint:disable-next-line: no-inferrable-types
+  apiURL: string = ' https://mysterious-peak-14776.herokuapp.com/customer';
+  customers: object;
 
-  customers = [
-    { id : 1, name: 'Dawud Ismail', address: 'North Legon Libya', telephoneNumber: '057652365456', email: 'Email@me.dot' },
-    { id : 2, name: 'Duwad Ibrahim', address: 'China town', telephoneNumber: '0245230256', email: 'duwad@mail.fd' },
-    { id : 3, name: 'Deniss Ky-09', address: 'Kumasi Russia', telephoneNumber: '0276562226', email: 'Emaicf5@me.dot' },
-    { id : 4, name: 'Another Name', address: 'somewhere', telephoneNumber: '020216666', email: 'sender@name.fg' }
-  ];
-  constructor() { }
+  constructor(private h: HttpClient) {
+  }
 
   ngOnInit() {
   }
