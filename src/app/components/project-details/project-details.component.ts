@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-details.component.css']
 })
 export class ProjectDetailsComponent implements OnInit {
+  project = {id : 1, name : 'TCMS2.0', description: 'Turntabl Management System 2.0'};
 
   constructor() { }
 
