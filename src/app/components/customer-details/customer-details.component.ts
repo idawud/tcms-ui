@@ -25,5 +25,4 @@ export class CustomerDetailsComponent implements OnInit {
     error => { console.log(error); }
     );
   }
-
 }
