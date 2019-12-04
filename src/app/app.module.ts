@@ -12,8 +12,9 @@ import { MainComponent } from './components/main/main.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 import { CustomersService } from './services/customers.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    OAuthModule.forRoot()
   ],
   providers: [
     CustomersService
