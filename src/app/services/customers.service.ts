@@ -15,14 +15,16 @@ const httpOptions = {
 
 
 export class CustomersService {
-  private apiURL = 'https://mysterious-peak-14776.herokuapp.com/customer';
+  private apiURL = 'https://mysterious-peak-14776.herokuapp.com/customer/';
   constructor(private httpClient: HttpClient) { }
 
   getCustomers(): Observable<Customer[]> {
     return this.httpClient.get<Customer[]>(this.apiURL);
   }
-postCustomer(customer: Customer): Observable<Customer> {
-  return this.httpClient.post<Customer>(this.apiURL, customer, httpOptions);
-}
-
+  postCustomer(customer: Customer): Observable<Customer> {
+    return this.httpClient.post<Customer>(this.apiURL, customer, httpOptions);
+  }
+  getCustomerById(id: string): Observable<Customer> {
+    return this.httpClient.get<Customer>(this.apiURL + id);
+    }
 }

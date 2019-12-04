@@ -37,7 +37,7 @@ export class NewcustomerComponent implements OnInit {
         result => { console.log(result); },
         error => { console.log(error); }
       );
-      alert('SUCCESS!! :-)\n\n' + data + '\n\n' + JSON.parse(data));
+      alert('SUCCESS!! :-)\n\n' + data + '\nAddedd Successfully!');
   }
 
   onReset() {

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CustomersService } from 'src/app/services/customers.service';
 
 @Component({
   selector: 'app-customer-details',
@@ -6,11 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer-details.component.css']
 })
 export class CustomerDetailsComponent implements OnInit {
-  customer = { id : 1, name: 'Dawud Ismail', address: 'North Legon Libya', telephoneNumber: '057652365456', email: 'Email@me.dot' };
+  customer;
+  private id: string;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private service: CustomersService) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.id = params.get('id');
+    });
+    this.service.getCustomerById(this.id).subscribe(
+      result => {
+        this.customer = result;
+        console.log(result);
+    },
+    error => { console.log(error); }
+    );
   }
 
 }
