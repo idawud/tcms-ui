@@ -11,6 +11,8 @@ import { ReportingComponent } from './components/reporting/reporting.component';
 import { MainComponent } from './components/main/main.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
+import { CustomersService } from './services/customers.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,9 +29,12 @@ import { CustomerDetailsComponent } from './components/customer-details/customer
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CustomersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
