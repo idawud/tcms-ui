@@ -14,6 +14,8 @@ import { CustomerDetailsComponent } from './components/customer-details/customer
 import { CustomersService } from './services/customers.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProjectService } from './services/project.service';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReportingComponent,
     MainComponent,
     ProjectDetailsComponent,
-    CustomerDetailsComponent
+    CustomerDetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   providers: [
-    CustomersService
+    CustomersService,
+    ProjectService
   ],
   bootstrap: [AppComponent]
 })

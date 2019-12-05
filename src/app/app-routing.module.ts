@@ -8,11 +8,14 @@ import { NewprojectComponent } from './components/newproject/newproject.componen
 import { NewcustomerComponent } from './components/newcustomer/newcustomer.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
-  { path : '', component : MainComponent },
+  { path : '', component : LoginComponent },
+  { path : 'home', component : MainComponent },
   { path : 'customers', component : CustomersComponent },
+  { path : 'login', component : LoginComponent },
   { path : 'projects', component : ProjectsComponent },
   { path : 'newcustomer', component : NewcustomerComponent },
   { path : 'newproject', component : NewprojectComponent },
