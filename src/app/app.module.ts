@@ -14,7 +14,6 @@ import { CustomerDetailsComponent } from './components/customer-details/customer
 import { CustomersService } from './services/customers.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { OAuthModule } from 'angular-oauth2-oidc';
 
 
 @NgModule({
@@ -33,8 +32,7 @@ import { OAuthModule } from 'angular-oauth2-oidc';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    OAuthModule.forRoot()
+    ReactiveFormsModule
   ],
   providers: [
     CustomersService
