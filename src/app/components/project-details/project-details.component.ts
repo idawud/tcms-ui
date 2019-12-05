@@ -25,5 +25,7 @@ export class ProjectDetailsComponent implements OnInit {
     error => { console.log(error); }
     );
   }
-
+  delete(id: any) {
+    console.log(id);
+  }
 }
