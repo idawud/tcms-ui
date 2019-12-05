@@ -19,10 +19,10 @@ export class ProjectService {
   getProjects(): Observable<Project[]> {
     return this.httpClient.get<Project[]>(this.apiURL);
   }
-  postCustomer(project: Project): Observable<Project> {
-    return this.httpClient.post<Project>(this.apiURL, project, httpOptions);
+  postProject(project: Project): Observable<Project> {
+    return this.httpClient.post<Project>(this.apiURL + '/project/add/', project, httpOptions);
   }
-  getCustomerById(id: string): Observable<Project> {
-    return this.httpClient.get<Project>(this.apiURL + id);
+  getProjectById(id: string): Observable<Project> {
+    return this.httpClient.get<Project>(this.apiURL + '/project/search/id/' + id);
     }
 }
