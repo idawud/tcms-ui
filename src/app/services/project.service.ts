@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ProjectService {
-  private apiURL = 'https://mysterious-peak-14776.herokuapp.com/customer/';
+  private apiURL = 'https://desolate-reaches-15540.herokuapp.com/';
   constructor(private httpClient: HttpClient) { }
 
   getProjects(): Observable<Project[]> {
