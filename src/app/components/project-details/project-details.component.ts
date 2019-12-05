@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-project-details',
@@ -6,11 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-details.component.css']
 })
 export class ProjectDetailsComponent implements OnInit {
-  project = {id : 1, name : 'TCMS2.0', description: 'Turntabl Management System 2.0'};
+  project;
+  id: string;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private service: ProjectService) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.id = params.get('id');
+    });
+    this.service.getProjectById(this.id).subscribe(
+      result => {
+        this.project = result;
+        console.log(result);
+    },
+    error => { console.log(error); }
+    );
   }
 
 }
